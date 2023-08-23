@@ -326,6 +326,15 @@ class CassieLoader(RobotLoader):
     ]
 
 
+class NadiaLoader(RobotLoader):
+    path = "nadia-description"
+    urdf_filename = "nadia_combined_knee_simple_collisions.urdf"
+    srdf_filename = "nadia_combined_knee_simple_collisions.srdf"
+    ref_posture = "standing"
+    urdf_subpath = "urdf"
+    free_flyer = True
+
+
 class TalosLoader(RobotLoader):
     path = "talos_data"
     urdf_filename = "talos_reduced.urdf"
@@ -677,6 +686,7 @@ ROBOTS = {
     "solo12": Solo12Loader,
     "finger_edu": FingerEduLoader,
     "pr2": PR2Loader,
+    "nadia": NadiaLoader,
     "talos": TalosLoader,
     "talos_box": TalosBoxLoader,
     "talos_arm": TalosArmLoader,
